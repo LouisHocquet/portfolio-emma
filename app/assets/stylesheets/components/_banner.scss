@@ -1,16 +1,43 @@
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), asset-url('concept_decor/concept_decor_concept_colored_bridge-mini.jpg');
-  width: 100vw;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.6)), asset-url('concept_decor/concept_decor_concept_colored_bridge-mini.jpg');
+  // width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
-  padding: 0 10px;
+  // display flex
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: row-reverse;
+  }
 }
 
-.showreel {
-  width: 100%;
+
+.banner-showreel {
+  // width: 100%;
+  min-width: 300px;
   max-width: 945px;
   min-height: 216px;
-  height: auto;
+  height: 250px;
   background-color: gray;
+  // display flex
+  flex-grow: 3;
+
+}
+
+.banner-text {
+  min-width: 300px;
+  max-width: 400px;
+  color: $light-gray;
+  flex-grow: 1;
+  padding: 0 36px;
+}
+
+@media screen and (max-width: 600px) {
+  .banner-text {
+    padding: 0;
+    margin: 24px 0 0 0;
+  }
 }
