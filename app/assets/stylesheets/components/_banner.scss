@@ -1,5 +1,16 @@
-.banner-container {
-  background-image: asset-url('concept_decor/concept_decor_concept_colored_bridge-mini.jpg');
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4)), asset-url('concept_decor/concept_decor_concept_colored_bridge-mini.jpg');
   width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 0 10px;
+}
+
+.showreel {
+  width: 100%;
+  max-width: 945px;
+  min-height: 216px;
+  height: auto;
+  background-color: gray;
 }
