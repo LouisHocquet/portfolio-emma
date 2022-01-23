@@ -38,3 +38,9 @@ h1, h2, h3, p {
     padding: 0 10px;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 16px;
+  }
+}
