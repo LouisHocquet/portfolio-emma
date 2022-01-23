@@ -24,10 +24,16 @@
   flex: 5 1 auto;
   width: 560px;
   height: fit-content;
-  box-shadow: 4px 2px 8px $black;
-  border-radius: 4px;
+  // box-shadow: 4px 2px 8px $black;
+  // border-radius: 4px;
   // align-self: end;
   max-width: 900px;
+  video {
+    width: 100%;
+    height: auto;
+    box-shadow: 4px 2px 8px #000;
+    border-radius: 4px;
+  }
 }
 
 .banner-text {
