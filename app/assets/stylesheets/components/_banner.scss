@@ -6,40 +6,45 @@
   background-position: center;
   // display flex
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row-reverse;
     // IOS compatibility
     display: -webkit-flex;
     -webkit-flex-wrap: wrap;
     -webkit-justify-content: space-around;
     -webkit-flex-direction: row-reverse;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
   }
 }
 
 
 .banner-showreel {
+  // IOS compatibility
+  -webkit-flex-align-self: end;
+
   flex: 5 1 auto;
   width: 560px;
   box-shadow: 4px 2px 8px $black;
   border-radius: 4px;
   align-self: end;
   max-width: 900px;
-  // IOS compatibility
-  -webkit-flex-align-self: end;
+
 }
 
 .banner-text {
+  // IOS compatibility
+  -webkit-flex-align-self: start;
+  -webkit-flex-flex: 1 1 auto;
+
   width: 300px;
   max-width: 400px;
   color: $light-gray;
   flex: 1 1 auto;
   padding: 0 24px;
   align-self: start;
-  // IOS compatibility
-  -webkit-flex-align-self: start;
-  -webkit-flex-flex: 1 1 auto;
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -58,16 +63,14 @@
 
 @media (orientation: landscape) {
   .banner-showreel {
-    // max-height: 80vh;
-    // margin-top: 60px;
+    // IOS compatibility
+    -webkit-flex-align-self: center;
     width: 320px;
     align-self: center;
-    // IOS compatibility
-    -webkit-flex-align-self: center;
   }
   .banner-text {
-    align-self: center;
     // IOS compatibility
     -webkit-flex-align-self: center;
+    align-self: center;
   }
 }
