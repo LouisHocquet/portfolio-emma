@@ -35,7 +35,7 @@
 
 .banner-text {
   // IOS compatibility
-  -webkit-flex-align-self: start;
+  -webkit-flex-align-self: flex-start;
   -webkit-flex-flex: 1 1 auto;
 
   width: 300px;
@@ -64,13 +64,13 @@
 @media (orientation: landscape) {
   .banner-showreel {
     // IOS compatibility
-    -webkit-flex-align-self: center;
+    -webkit-flex-align-self: flex-center;
     width: 320px;
     align-self: center;
   }
   .banner-text {
     // IOS compatibility
-    -webkit-flex-align-self: center;
+    -webkit-flex-align-self: flex-center;
     align-self: center;
   }
 }
