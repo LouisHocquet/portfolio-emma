@@ -5,12 +5,17 @@
   background-size: cover;
   background-position: center;
   // display flex
-  .container {
+  .flex-box-banner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row-reverse;
-    align-items: end;
+    flex-grow: 1;
+    // align-items: end;
+  }
+  .container {
+    display: flex;
+    align-items: center;
   }
 }
 
