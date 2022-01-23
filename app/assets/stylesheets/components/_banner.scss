@@ -9,8 +9,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    // align-items: center;
     flex-direction: row-reverse;
+    // IOS compatibility
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -webkit-flex-direction: row-reverse;
   }
 }
 
@@ -22,7 +26,8 @@
   border-radius: 4px;
   align-self: end;
   max-width: 900px;
-  // max-height: 80vh;
+  // IOS compatibility
+  -webkit-flex-align-self: end;
 }
 
 .banner-text {
@@ -32,6 +37,9 @@
   flex: 1 1 auto;
   padding: 0 24px;
   align-self: start;
+  // IOS compatibility
+  -webkit-flex-align-self: start;
+  -webkit-flex-flex: 1 1 auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -54,8 +62,12 @@
     // margin-top: 60px;
     width: 320px;
     align-self: center;
+    // IOS compatibility
+    -webkit-flex-align-self: center;
   }
   .banner-text {
     align-self: center;
+    // IOS compatibility
+    -webkit-flex-align-self: center;
   }
 }
