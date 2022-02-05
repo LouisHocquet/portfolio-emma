@@ -4,6 +4,7 @@ class CreateImages < ActiveRecord::Migration[6.1]
       t.string :path
       t.integer :format
       t.boolean :main
+      t.belongs_to :work, foreign_key: true
 
       t.timestamps
     end
