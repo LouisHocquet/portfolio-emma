@@ -23,25 +23,29 @@
     min-height: 240px;
     max-height: 80vh;
   }
-
-  .hover-title {
-    position: absolute;
-    top: 0;
-    background: blue;
-    opacity: 0.6;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid #F8FFF0;
-    box-sizing: border-box;
-    border-radius: 8px;
-    display: none;
-  }
 }
 
+.hover-title {
+  position: absolute;
+  top: 0;
+  background: blue;
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #F8FFF0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
+.grid-container>div:hover {
+  cursor: pointer;
+  .hover-title {
+    display: flex;
+  }
+}
 
 .w-4 {
   flex: 4 0 auto;
