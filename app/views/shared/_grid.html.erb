@@ -5,4 +5,9 @@
   <%= image_tag "concept_decor/concept_decor_bubble_world-mini.jpg", class: "w-3" %>
   <%= image_tag "concept_decor/concept_decor_concept_colored_rocks-mini.jpg", class: "w-2" %>
   <h1><%= @works %></h1>
+
+  <% @works.each do |work| %>
+    work.images.filter
+    <%= image_tag work.images.filterpath, class: "w-" + work.format %>
+  <% end %>
 </div>
