@@ -4,12 +4,16 @@
     <% main_image = work.images.filter { |x| x.main } %>
     <% main_image = main_image.first %>
 
-    <div class= "w-<%= main_image.format.to_s %>" >
-      <%= image_tag main_image.path %>
-      <div class="hover-title">
-        <p><%= work.title %></p>
-      </div>
-    </div>
+    <%= link_to work_show_path(id: work), class: "w-#{main_image.format.to_s}" do %>
+
+      <%# <div> %>
+        <%= image_tag main_image.path %>
+        <div class="hover-title">
+          <h2><%= work.title %></h2>
+        </div>
+      <%# </div> %>
+
+    <% end %>
 
   <% end %>
 </div>

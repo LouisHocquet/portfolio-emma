@@ -6,9 +6,6 @@
   img {
     object-fit: cover;
     object-position: center;
-    // height: 400px;
-    // min-height: 240px;
-    // max-height: 80vh;
     width: 100%;
     height: 100%;
     border: 4px solid #F8FFF0;
@@ -16,7 +13,8 @@
     border-radius: 8px;
   }
 
-  >div {
+  >a {
+    display: block;
     position: relative;
     max-width: 100%;
     height: 400px;
@@ -28,8 +26,8 @@
 .hover-title {
   position: absolute;
   top: 0;
-  background: blue;
-  opacity: 0.6;
+  background: $primary;
+  opacity: 0.8;
   height: 100%;
   width: 100%;
   display: none;
@@ -38,9 +36,12 @@
   border: 4px solid #F8FFF0;
   box-sizing: border-box;
   border-radius: 8px;
+  h2 {
+    color: $dark-gray;
+  }
 }
 
-.grid-container>div:hover {
+.grid-container>a:hover {
   cursor: pointer;
   .hover-title {
     display: flex;
@@ -69,8 +70,7 @@
 
 @media screen and (max-width: 900px) {
   .grid-container {
-    // flex-direction: column;
-    >div {
+    >a {
       height: 320px;
       max-width: 100%;
     }
@@ -95,10 +95,8 @@
 
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .grid-container {
-    >div {
+    >a {
       height: 240px;
-      // width: 80vw;
-      // max-width: 100%;
     }
   }
 
