@@ -1,23 +1,15 @@
 <div class="grid-container">
-  <div class="w-4">
-    <%= image_tag "concept_decor/concept_decor_fairytale-mini.jpg" %>
-  </div>
-  <div class="w-2">
-    <%= image_tag "concept_decor/concept_decor_concept_colored_bridge-mini.jpg" %>
-  </div>
-  <div class="w-1">
-    <%= image_tag "chara_design/chara_design_capu_main-mini.jpg" %>
-  </div>
-  <div class="w-3">
-    <%= image_tag "concept_decor/concept_decor_bubble_world-mini.jpg" %>
-  </div>
-  <div class="w-2">
-    <%= image_tag "concept_decor/concept_decor_concept_colored_rocks-mini.jpg" %>
-  </div>
 
   <% @works.each do |work| %>
     <% main_image = work.images.filter { |x| x.main } %>
     <% main_image = main_image.first %>
-    <%= image_tag main_image.path, class: "w-" + main_image.format.to_s %>
+
+    <div class= "w-<%= main_image.format.to_s %>" >
+      <%= image_tag main_image.path %>
+      <div class="hover-title">
+        <p><%= work.title %></p>
+      </div>
+    </div>
+
   <% end %>
 </div>
