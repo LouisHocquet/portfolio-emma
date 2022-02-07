@@ -1,9 +1,17 @@
+<% images = @work.images %>
+
 <div class="slideshow-container">
 
   <%# full width images with numbers %>
-  <div class="mySlides fade">
-    <div class="numberText">1 / 3</div>
-    <%= image_tag images.first.path, style: 'width:100%' %>
-  </div>
+  <% images.each_with_index do |image, index| %>
+    <div class="mySlides fade">
+      <div class="numberText"> <%= "#{(index + 1).to_s} / #{images.count.to_s}" %> </div>
+      <%= image_tag image.path, style: 'width:100%' %>
+    </div>
+  <% end %>
+
+  <%# next and previous buttons %>
+  <div class="btnPrev" ><i class="fas fa-chevron-left"></i></div>
+  <div class="btnNext" ><i class="fas fa-chevron-right"></i></div>
 
 </div>

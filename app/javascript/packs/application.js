@@ -15,8 +15,8 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 
-import { testMessage } from '../scripts/test.js'
+import { initSlideShow } from '../scripts/slideshow'
 
 document.addEventListener('turbolinks:load', () => {
-  testMessage();
+  initSlideShow();
 })
