@@ -5,7 +5,7 @@
   <%# full width images with numbers %>
   <% images.each_with_index do |image, index| %>
     <div class="mySlides fade">
-      <div class="numberText"> <%= "#{(index + 1).to_s} / #{images.count.to_s}" %> </div>
+      <div class="numberText"> <p><%= "#{(index + 1).to_s} / #{images.count.to_s}" %></p></div>
       <%= image_tag image.path, style: 'width:100%' %>
     </div>
   <% end %>
