@@ -91,6 +91,21 @@ work_capu.images.create!(
   format: 1,
   main: true
 )
+work_capu.images.create!(
+  path: 'chara_design/chara_design_capu_expression-mini.jpg',
+  format: 2,
+  main: false
+)
+work_capu.images.create!(
+  path: 'chara_design/chara_design_capu_semi_poses-mini.jpg',
+  format: 2,
+  main: false
+)
+work_capu.images.create!(
+  path: 'chara_design/chara_design_capu_turn-mini.jpg',
+  format: 2,
+  main: false
+)
 
 # Bubble World
 work_bubble_world = category_concept_decor.works.create!(
@@ -181,7 +196,7 @@ work_maximilian.images.create!(
 )
 work_maximilian.images.create!(
   path: 'chara_design/chara_design_maximilian-picture-mini.jpg',
-  format: 2,
+  format: 1,
   main: false
 )
 
