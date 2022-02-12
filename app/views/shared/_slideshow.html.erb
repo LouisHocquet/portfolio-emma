@@ -5,14 +5,17 @@
   <%# full width images with numbers %>
   <% images.each_with_index do |image, index| %>
     <div class="mySlides fade">
-      <div class="numberText"> <p><%= "#{(index + 1).to_s} / #{images.count.to_s}" %></p></div>
+      <% unless images.length <= 1 %>
+        <div class="numberText"> <p><%= "#{(index + 1).to_s} / #{images.count.to_s}" %></p></div>
+      <% end %>
       <% [0, 1].include?(image.format) ? max_dim = "height" : max_dim = "width" %>
       <%= image_tag image.path %>
     </div>
   <% end %>
 
   <%# next and previous buttons %>
-  <div class="btnPrev" ><i class="fas fa-chevron-left"></i></div>
-  <div class="btnNext" ><i class="fas fa-chevron-right"></i></div>
-
+  <% unless images.length <= 1 %>
+    <div class="btnPrev" ><i class="fas fa-chevron-left"></i></div>
+    <div class="btnNext" ><i class="fas fa-chevron-right"></i></div>
+  <% end %>
 </div>

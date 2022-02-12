@@ -5,12 +5,14 @@ const initSlideShow = () => {
 
     const btnNext = document.querySelector('.btnNext');
     const btnPrev = document.querySelector('.btnPrev');
-    btnNext.addEventListener('click', (event) => {
-      nextSlide();
-    })
-    btnPrev.addEventListener('click', (event) => {
-      prevSlide();
-    })
+    if (btnNext && btnPrev) {
+      btnNext.addEventListener('click', (event) => {
+        nextSlide();
+      })
+      btnPrev.addEventListener('click', (event) => {
+        prevSlide();
+      })
+    }
 
     const showSlides = (n) => {
       let i;
