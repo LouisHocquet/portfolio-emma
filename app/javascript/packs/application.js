@@ -16,7 +16,9 @@ import "controllers"
 import "bootstrap"
 
 import { initSlideShow } from '../scripts/slideshow'
+import { initBannerVideo } from '../scripts/banner'
 
 document.addEventListener('turbolinks:load', () => {
   initSlideShow();
+  initBannerVideo();
 })

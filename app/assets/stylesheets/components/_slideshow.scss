@@ -7,7 +7,7 @@
 
 /* Hide the images by default */
 .mySlides {
-  height: 90vh;
+  height: 85vh;
   background-color: $black;
   display: none;
   img {
@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
-  .mySlides { height: 80vh };
+  .mySlides { height: 70vh };
 }
 @media screen and (max-width: 900px) and (orientation: portrait) {
   .mySlides { height: 60vh };
