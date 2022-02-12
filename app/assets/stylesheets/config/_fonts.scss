@@ -8,17 +8,21 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 h1 {
   font-size: 24px;
   font-weight: 600;
-  line-height: 33px;
+  // line-height: 33px;
 }
 
 h2 {
   font-size: 18px;
-  line-height: 25px;
+  // line-height: 25px;
 }
 
 p {
   font-size: 14px;
-  line-height: 19px;
+  // line-height: 19px;
+}
+
+.p-email {
+  font-size: 16px;
 }
 
 .big-letters {
@@ -26,7 +30,7 @@ p {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 33px;
+  // line-height: 33px;
   margin: 0 0 16px 0;
 }
 
@@ -34,22 +38,26 @@ p {
   h1 {
     font-size: 28px;
     font-weight: 600;
-    line-height: 38px;
+    // line-height: 38px;
   }
   
   h2 {
     font-size: 24px;
-    line-height: 33px;
+    // line-height: 33px;
   }
 
   p {
     font-size: 18px;
-    line-height: 25px;
+    // line-height: 25px;
+  }
+
+  .p-email {
+    font-size: 22px;
   }
 
   .big-letters {
     font-size: 36px;
-    line-height: 49px;
+    // line-height: 49px;
   }
 }
 
