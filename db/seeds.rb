@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# images format :
+# 0 : portrait
+# 1 : square
+# 2 : landscape-s
+# 3 : landscape-m
+# 4 : landscape-l
+
 puts "=== Cleaning database... ==="
 Category.destroy_all
-Work.destroy_all
+# Work.destroy_all
 puts "=== Works cleaned ! ==="
 # Category.destroy_all
 # puts "=== Categories cleaned ! ==="
@@ -97,6 +104,25 @@ work_bubble_world.images.create!(
   format: 3,
   main: true
 )
+
+# Eleana
+work_eleana = category_character_design.works.create!(
+  title: 'Eleana',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
+  In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
+  Adipiscing sem nibh aliquam mattis diam.'
+)
+work_eleana.images.create!(
+  path: 'chara_design/chara_design_eleana-main-mini.jpg',
+  format: 0,
+  main: true
+)
+work_eleana.images.create!(
+  path: 'chara_design/chara_design_eleana-picture-mini.jpg',
+  format: 0,
+  main: false
+)
+
 # Studio
 work_studio = category_concept_decor.works.create!(
   title: 'Bubble World',
@@ -139,6 +165,24 @@ work_mouse.images.create!(
   path: 'chara_design/chara_design_turn_main-mini.jpg',
   format: 2,
   main: true
+)
+
+# Maximilian
+work_maximilian = category_character_design.works.create!(
+  title: 'Maximilian',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
+  In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
+  Adipiscing sem nibh aliquam mattis diam.'
+)
+work_maximilian.images.create!(
+  path: 'chara_design/chara_design_maximilian-main-mini.jpg',
+  format: 0,
+  main: true
+)
+work_maximilian.images.create!(
+  path: 'chara_design/chara_design_maximilian-picture-mini.jpg',
+  format: 2,
+  main: false
 )
 
 puts "=== #{Work.count} works created ! ==="
