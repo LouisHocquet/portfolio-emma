@@ -14,6 +14,7 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+//= require fontawesome/all
 
 import { initSlideShow } from '../scripts/slideshow'
 import { initBannerVideo } from '../scripts/banner'
