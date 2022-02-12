@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "=== Cleaning database... ==="
+Category.destroy_all
 Work.destroy_all
 puts "=== Works cleaned ! ==="
 # Category.destroy_all
@@ -15,9 +16,19 @@ puts "=== Works cleaned ! ==="
 # puts "=== Images cleaned ! ==="
 puts "=== Database cleaned ! ==="
 
-puts "=== Adding Works ==="
+puts "=== Adding categories ... ==="
+category_concept_decor = Category.create!(
+  name: 'Concept Decor'
+)
+category_character_design = Category.create!(
+  name: 'Character Design'
+)
+
+puts "=== #{Category.count} categories created ! ==="
+
+puts "=== Adding Works ... ==="
 # Fairy Tale
-work_fairy_tail = Work.create!(
+work_fairy_tail = category_concept_decor.works.create!(
   title: 'Fairy Tale',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -29,7 +40,7 @@ work_fairy_tail.images.create!(
   main: true
 )
 # Colored Concept
-work_concept_colored = Work.create!(
+work_concept_colored = category_concept_decor.works.create!(
   title: 'Colored Concept',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -62,7 +73,7 @@ work_concept_colored.images.create!(
 )
 
 # Capu
-work_capu = Work.create!(
+work_capu = category_character_design.works.create!(
   title: 'Capucine',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -75,7 +86,7 @@ work_capu.images.create!(
 )
 
 # Bubble World
-work_bubble_world = Work.create!(
+work_bubble_world = category_concept_decor.works.create!(
   title: 'Bubble World',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -87,7 +98,7 @@ work_bubble_world.images.create!(
   main: true
 )
 # Studio
-work_studio = Work.create!(
+work_studio = category_concept_decor.works.create!(
   title: 'Bubble World',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -105,7 +116,7 @@ work_studio.images.create!(
 )
 
 # Castle
-work_castle = Work.create!(
+work_castle = category_character_design.works.create!(
   title: 'The Castle',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -118,7 +129,7 @@ work_castle.images.create!(
 )
 
 # Mouse turn
-work_mouse = Work.create!(
+work_mouse = category_character_design.works.create!(
   title: 'The Mouse',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lectus rhoncus in tellus scelerisque urna suspendisse. 
   In eros, enim amet, nunc, nulla ut in aliquet dictum. Pharetra neque justo, ultrices habitant urna orci turpis. 
@@ -130,4 +141,4 @@ work_mouse.images.create!(
   main: true
 )
 
-puts "=== #{Work.count} works added! ==="
+puts "=== #{Work.count} works created ! ==="
