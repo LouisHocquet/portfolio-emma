@@ -1,6 +1,7 @@
 .navbar-container {
   background-color: $primary-opacity;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 60px;
