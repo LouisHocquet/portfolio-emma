@@ -34,6 +34,14 @@ p {
   margin: 0 0 16px 0;
 }
 
+.p-logo-title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
 @media screen and (min-width: 900px) {
   h1 {
     font-size: 28px;
@@ -58,6 +66,10 @@ p {
   .big-letters {
     font-size: 36px;
     // line-height: 49px;
+  }
+
+  .p-logo-title {
+    font-size: 24px;
   }
 }
 
