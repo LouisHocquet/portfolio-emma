@@ -27,3 +27,23 @@
     }
   }
 }
+
+@media screen and (max-width: 900px){
+  .navbar-container {
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo-title {
+      transform: rotate(0);
+      margin-left: 20px;
+    }
+    .burger-icon {
+      transform: rotate(0);
+      margin-right: 20px;
+    }
+    .social-links {
+      display: none;
+    }
+  }
+}
