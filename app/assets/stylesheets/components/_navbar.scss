@@ -19,12 +19,16 @@
   }
   .burger-icon {
     transform: rotate(-90deg);
+    cursor: pointer;
+    i {
+      font-size: 32px;
+    }
   }
   .social-links {
     display: flex;
     flex-direction: column;
     i {
-      margin-top: 12px;
+      margin-top: 16px;
     }
   }
 }
@@ -46,6 +50,19 @@
     }
     .social-links {
       display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navbar-container{
+    .logo-title {
+      position: absolute;
+      top: 80px
+    }
+    .social-links {
+      position: absolute;
+      bottom: 48px;
     }
   }
 }

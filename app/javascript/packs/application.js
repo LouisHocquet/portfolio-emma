@@ -18,8 +18,10 @@ import "bootstrap"
 
 import { initSlideShow } from '../scripts/slideshow'
 import { initBannerVideo } from '../scripts/banner'
+import { initMenu } from '../scripts/menu'
 
 document.addEventListener('turbolinks:load', () => {
   initSlideShow();
   initBannerVideo();
+  initMenu();
 })
