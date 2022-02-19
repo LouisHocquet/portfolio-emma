@@ -1,5 +1,5 @@
 .navbar-container {
-  background-color: $primary-opacity;
+  background-color: $primary;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -42,6 +42,7 @@
     .burger-icon {
       transform: rotate(0);
       margin-right: 20px;
+      font-size: 28px;
     }
     .social-links {
       display: none;
