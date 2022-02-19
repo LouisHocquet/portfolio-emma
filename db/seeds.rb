@@ -24,11 +24,23 @@ puts "=== Works cleaned ! ==="
 puts "=== Database cleaned ! ==="
 
 puts "=== Adding categories ... ==="
-category_concept_decor = Category.create!(
-  name: 'Concept Decor'
+category_animation = Category.create!(
+  name: 'Animation'
 )
 category_character_design = Category.create!(
   name: 'Character Design'
+)
+category_concept_decor = Category.create!(
+  name: 'Concept Decor'
+)
+category_illustration = Category.create!(
+  name: 'Illustration'
+)
+category_layout_character = Category.create!(
+  name: 'Layout Character'
+)
+category_story_board = Category.create!(
+  name: 'Story Board'
 )
 
 puts "=== #{Category.count} categories created ! ==="
