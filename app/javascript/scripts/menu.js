@@ -7,12 +7,11 @@ const initMenu = () => {
 
     navbarBurgerIcon.addEventListener('click', () => {
       showMenu();
-      console.log('click');
-    })
+    });
 
     menuCloseIcon.addEventListener('click', () => {
       hideMenu();
-    })
+    });
 
     const showMenu = () => {
       menu.style.visibility = 'visible';
