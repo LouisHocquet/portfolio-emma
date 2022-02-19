@@ -55,3 +55,8 @@ h1, h2, h3, p {
     padding: 0 8px;
   }
 }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
