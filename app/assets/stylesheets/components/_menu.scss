@@ -21,12 +21,12 @@
   }
 
   .contact-block {
-    margin: 20px auto;
+    margin-bottom: 60px;
   }
 }
 
 .menu-links {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
   flex-grow: 1;
   display: flex;
@@ -36,14 +36,20 @@
     text-decoration: none;
     color: $black;
   }
+  h2 {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 900px){
   .menu-fixed-container {
     width: 500px;
   }
+  .menu-links {
+    margin-top: 80px;
+  }
   .contact-block {
-    margin: 40px auto;
+    margin-top: 0;
   }
 }
 
