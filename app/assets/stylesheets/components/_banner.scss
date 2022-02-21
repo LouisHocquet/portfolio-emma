@@ -71,3 +71,41 @@
     margin-right: 8px;
   }
 }
+
+// Banner category
+.banner-category {
+  // height: 100vh;
+  // width: 100vw;
+  position: relative;
+  img {
+    width: 100vw;
+    // height: 100vh;
+    object-position: center;
+    object-fit: cover;
+  }
+  .gradient-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $black-opacity;
+  }
+}
+
+.category-name {
+  .big-letters {
+    color: $white;
+  }
+  div {
+    background-color: $primary;
+    height: 8px;
+    width: 100px;
+    margin: 8px auto;
+  }
+  
+}
