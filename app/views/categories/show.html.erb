@@ -1,33 +1,46 @@
-<% category_image = @category.works.first.images.filter { |x| x.main } %>
-<% category_image = category_image.first %>
-
-
 <%= render 'shared/navbar' %>
 <%= render 'shared/menu' %>
 
-<div class="banner-category"> 
-<%= image_tag category_image.path %>
-  <div class="gradient-overlay">
-    <div class="category-name">
-      <h1 class="big-letters"><%= @category.name %></h1>
-      <div></div>
+<% if @category.works.length > 0 %>
+
+  <% category_image = @category.works.first.images.filter { |x| x.main } %>
+  <% category_image = category_image.first %>
+
+  <div class="banner-category"> 
+  <%= image_tag category_image.path %>
+    <div class="gradient-overlay">
+      <div class="category-name">
+        <h1 class="big-letters"><%= @category.name %></h1>
+        <div></div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="category-work-list">
-    <% @category.works.each do |work| %>
-      <%= link_to work_show_path(id: work) do %>
-        <% main_image = work.images.filter { |x| x.main } %>
-        <% main_image = main_image.first %>
-        <%= image_tag main_image.path, class: "work-image" %>
-        <h2 class="work-title"><%= work.title %></h2>
+  <div class="container">
+    <div class="category-work-list">
+      <% @category.works.each do |work| %>
+        <%= link_to work_show_path(id: work) do %>
+          <% main_image = work.images.filter { |x| x.main } %>
+          <% main_image = main_image.first %>
+          <%= image_tag main_image.path, class: "work-image" %>
+          <h2 class="work-title"><%= work.title %></h2>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+
+    <%= render 'shared/contact' %>
+    <%= render 'shared/footer' %>
   </div>
 
-  <%= render 'shared/contact' %>
-  <%= render 'shared/footer' %>
-</div>
+<% else %>
+
+  <div class="container">
+    <div class="empty-state">
+      <h1 class="big-letters">
+        Cette page est encore en chantier ... 🚧
+      </h1>
+    </div>
+  </div>
+
+<% end %>
 
