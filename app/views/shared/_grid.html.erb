@@ -4,14 +4,19 @@
     <% main_image = work.images.filter { |x| x.main } %>
     <% main_image = main_image.first %>
 
+
     <%= link_to work_show_path(id: work), class: "w-#{main_image.format.to_s}" do %>
 
-      <%# <div> %>
+      <% if main_image.file_type == 0 %>
         <%= image_tag main_image.path %>
-        <div class="hover-title">
-          <h2><%= work.title %></h2>
-        </div>
-      <%# </div> %>
+
+      <% elsif main_image.file_type == 1 %>
+        <%= video_tag main_image.path, autoplay: true, muted: true, 
+        loop: true, controls: false %>
+      <% end %>
+      <div class="hover-title">
+        <h2><%= work.title %></h2>
+      </div>
 
     <% end %>
 

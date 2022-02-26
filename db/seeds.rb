@@ -175,16 +175,16 @@ work_terrarium.images.create!(
 )
 
 # Algue
-work_algue = category_animation.works.create!(
-  title: 'Algue',
-  description: 'Algue réalisée en animation traditionnelle.'
-)
-work_algue.images.create!(
-  path: 'animation/algue-mini.mp4',
-  format: 2,
-  file_type: 1,
-  main: true
-)
+# work_algue = category_animation.works.create!(
+#   title: 'Algue',
+#   description: 'Algue réalisée en animation traditionnelle.'
+# )
+# work_algue.images.create!(
+#   path: 'animation/algue-mini.mp4',
+#   format: 2,
+#   file_type: 1,
+#   main: true
+# )
 
 # Bateau fantome
 work_bateau_fantome = category_concept_decor.works.create!(
@@ -285,16 +285,19 @@ work_puck = category_character_design.works.create!(
 work_puck.images.create!(
   path: 'character_design/chara_design_puck_main-mini.jpg',
   format: 2,
+  file_type: 0,
   main: true
 )
 work_puck.images.create!(
   path: 'character_design/chara_design_puck_1-mini.jpg',
   format: 2,
+  file_type: 0,
   main: false
 )
 work_puck.images.create!(
   path: 'character_design/chara_design_puck_2-mini.jpg',
   format: 2,
+  file_type: 0,
   main: false
 )
 
