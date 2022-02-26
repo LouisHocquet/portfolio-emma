@@ -16,7 +16,7 @@
         <%= image_tag image.path %>
       <% elsif image.file_type == 1 %>
         <%= video_tag image.path, loop: true,
-        controls: true %>
+        controls: true, playsinline: true %>
       <% end %>
       
     </div>
