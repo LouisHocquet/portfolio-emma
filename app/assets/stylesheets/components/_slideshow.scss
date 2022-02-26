@@ -8,10 +8,17 @@
     z-index: 10;
     top: 0;
     right: 0;
-    padding: 14px 20px;
     font-size: 20px;
     cursor: pointer;
     color: $secondary-opacity;
+    background-color: $black-opacity;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 8px;
   }
 }
 
@@ -19,9 +26,12 @@
 .numberText {
   color: $secondary-opacity;
   font-size: 12px;
-  padding: 14px 20px;
+  padding: 8px 16px;
   position: absolute;
   top: 0;
+  border-radius: 0 0 4px 0;
+  // margin: 8px;
+  background-color: $black-opacity;
   z-index: 10;
   p {
     margin: 0;
@@ -49,44 +59,46 @@
 .btnPrev, .btnNext {
   cursor: pointer;
   position: absolute;
-  width: auto;
-  // margin-top: -22px;
-  padding: 0 24px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: $black-opacity;
   color: $secondary-opacity;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
-  height: 85vh;
-  top: 0;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  bottom: 0;
+  margin: 8px;
 }
 
 /* Position the "next button" to the right */
 .btnNext {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
-  .mySlides, .btnPrev, .btnNext { height: 80vh };
+  .mySlides { height: 80vh };
 }
 @media screen and (max-width: 900px) and (orientation: portrait) {
-  .mySlides, .btnPrev, .btnNext { height: 60vh };
+  .mySlides { height: 60vh };
 }
 @media screen and (min-width: 900px) {
   .slideshow-container {
-    .close-work-show-icon, .numberText {
-      padding: 20px;
+    .btnPrev:hover, .btnNext:hover, .close-work-show-icon:hover {
+      background-color: $black;
     }
-  }
-  .btnPrev:hover, .btnNext:hover {
-    background-color: rgba(0,0,0,0.6);
+    .btnPrev, .btnNext, .close-work-show-icon {
+      margin: 16px;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
   }
 }
 
