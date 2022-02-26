@@ -11,7 +11,7 @@
         <%= image_tag main_image.path %>
 
       <% elsif main_image.file_type == 1 %>
-        <%= video_tag main_image.path, autoplay: true, muted: true, 
+        <%= video_tag main_image.path, autoplay: false, muted: true, 
         loop: true, controls: false %>
       <% end %>
       <div class="hover-title">
