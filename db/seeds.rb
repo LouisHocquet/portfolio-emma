@@ -173,6 +173,19 @@ work_terrarium.images.create!(
   file_type: 0,
   main: true
 )
+
+# Algue
+work_algue = category_animation.works.create!(
+  title: 'Algue',
+  description: 'Algue réalisée en animation traditionnelle.'
+)
+work_algue.images.create!(
+  path: 'animation/algue-mini.mp4',
+  format: 2,
+  file_type: 1,
+  main: true
+)
+
 # Bateau fantome
 work_bateau_fantome = category_concept_decor.works.create!(
   title: 'Bateau fantôme',
