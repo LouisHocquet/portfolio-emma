@@ -15,7 +15,7 @@
         loop: true, controls: false %>
       <% end %>
       <div class="hover-title">
-        <h2><%= work.title %></h2>
+        <h2><%= "- #{work.category.name} -" %><br><%= work.title %></h2>
       </div>
 
     <% end %>
