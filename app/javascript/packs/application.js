@@ -21,6 +21,7 @@ import { initBannerVideo } from '../scripts/banner'
 import { initMenu } from '../scripts/menu'
 import { initVh100 } from '../scripts/vh100'
 import { initGridVideos } from '../scripts/grid'
+import { initUpdateNavbarOnScroll } from '../scripts/navbar'
 
 document.addEventListener('turbolinks:load', () => {
   initSlideShow();
@@ -28,4 +29,5 @@ document.addEventListener('turbolinks:load', () => {
   initMenu();
   initVh100();
   initGridVideos();
+  initUpdateNavbarOnScroll();
 })
