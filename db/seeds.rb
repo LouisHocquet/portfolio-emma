@@ -86,6 +86,36 @@ work_speed_paintings.images.create!(
   main: false
 )
 
+# Cycle de marche
+work_walk_static = category_animation.works.create!(
+  title: 'Cycle de marche',
+  description: 'Cycle de marche réalisé en animation traditionnelle en 17 frames.'
+)
+work_walk_static.images.create!(
+  path: 'animation/walk_static-mini.mp4',
+  format: 2,
+  file_type: 1,
+  main: true
+)
+
+# Deconnectee decors
+work_studio = category_concept_decor.works.create!(
+  title: 'Déconnecté(e) - Décors',
+  description: 'Décors du très court métrage “Déconnecté(e)”, réalisés sur photoshop à partir de modélisations 3D.'
+)
+work_studio.images.create!(
+  path: 'concept_decor/concept_decor_deco_decors_main-mini.jpg',
+  format: 2,
+  file_type: 0,
+  main: true
+)
+work_studio.images.create!(
+  path: 'concept_decor/concept_decor_deco_decors_1-mini.jpg',
+  format: 2,
+  file_type: 0,
+  main: false
+)
+
 # Capu
 work_capu = category_character_design.works.create!(
   title: 'Déconnecté(e) - Capucine',
@@ -118,6 +148,18 @@ work_capu.images.create!(
   main: false
 )
 
+# Terrarium
+work_terrarium = category_concept_decor.works.create!(
+  title: 'Terrarium magique',
+  description: 'Props réalisé en digital painting sur photoshop.'
+)
+work_terrarium.images.create!(
+  path: 'concept_decor/concept_decor_terrarium_main-mini.jpg',
+  format: 3,
+  file_type: 0,
+  main: true
+)
+
 # Déconnecté(e)
 work_deconnectee = category_animation.works.create!(
   title: 'Déconnecté(e)',
@@ -129,48 +171,6 @@ work_deconnectee.images.create!(
   path: 'animation/deconnecte_last-mini.mp4',
   format: 2,
   file_type: 1,
-  main: true
-)
-
-# Deconnectee decors
-work_studio = category_concept_decor.works.create!(
-  title: 'Déconnecté(e) - Décors',
-  description: 'Décors du très court métrage “Déconnecté(e)”, réalisés sur photoshop à partir de modélisations 3D.'
-)
-work_studio.images.create!(
-  path: 'concept_decor/concept_decor_deco_decors_main-mini.jpg',
-  format: 2,
-  file_type: 0,
-  main: true
-)
-work_studio.images.create!(
-  path: 'concept_decor/concept_decor_deco_decors_1-mini.jpg',
-  format: 2,
-  file_type: 0,
-  main: false
-)
-
-# Cycle de marche
-work_walk_static = category_animation.works.create!(
-  title: 'Cycle de marche',
-  description: 'Cycle de marche réalisé en animation traditionnelle en 17 frames.'
-)
-work_walk_static.images.create!(
-  path: 'animation/walk_static-mini.mp4',
-  format: 2,
-  file_type: 1,
-  main: true
-)
-
-# Terrarium
-work_terrarium = category_concept_decor.works.create!(
-  title: 'Terrarium magique',
-  description: 'Props réalisé en digital painting sur photoshop.'
-)
-work_terrarium.images.create!(
-  path: 'concept_decor/concept_decor_terrarium_main-mini.jpg',
-  format: 3,
-  file_type: 0,
   main: true
 )
 

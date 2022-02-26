@@ -6,15 +6,29 @@
   <% category_image = @category.works.first.images.filter { |x| x.main } %>
   <% category_image = category_image.first %>
 
-  <div class="banner-category"> 
-  <%= image_tag category_image.path %>
-    <div class="gradient-overlay">
-      <div class="category-name">
-        <h1 class="big-letters"><%= @category.name %></h1>
-        <div></div>
+  <div class="banner-category">   
+
+    <% if  category_image.file_type == 0 %>
+      <%= image_tag category_image.path %>
+      <div class="gradient-overlay">
+        <div class="category-name">
+          <h1 class="big-letters"><%= @category.name %></h1>
+          <div></div>
+        </div>
       </div>
-    </div>
+
+    <% elsif category_image.file_type == 1 %>
+      <%= video_tag category_image.path %>
+      <div class="gradient-overlay">
+        <div class="category-name">
+          <h1 class="big-letters"><%= @category.name %></h1>
+          <div></div>
+        </div>
+      </div>
+    <% end %>
+  
   </div>
+
 
   <div class="container">
     <div class="category-work-list">
@@ -22,7 +36,16 @@
         <%= link_to work_show_path(id: work) do %>
           <% main_image = work.images.filter { |x| x.main } %>
           <% main_image = main_image.first %>
-          <%= image_tag main_image.path, class: "work-image" %>
+
+          <% if main_image.file_type == 0 %>
+            <%= image_tag main_image.path, class: "work-image" %>
+          <% elsif main_image.file_type == 1 %>
+            <%= video_tag main_image.path, class: "work-image",
+              autoplay: false, muted: true, 
+              loop: true, controls: false, playsinline: true
+             %>
+          <% end %>
+
           <h2 class="work-title"><%= work.title %></h2>
         <% end %>
       <% end %>
@@ -32,7 +55,7 @@
     <%= render 'shared/footer' %>
   </div>
 
-<% else %>
+  <% else %>
 
   <div class="container">
     <div class="empty-state">

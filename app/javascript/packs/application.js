@@ -20,7 +20,7 @@ import { initSlideShow } from '../scripts/slideshow'
 import { initBannerVideo } from '../scripts/banner'
 import { initMenu } from '../scripts/menu'
 import { initVh100 } from '../scripts/vh100'
-import { initGridVideos } from '../scripts/grid'
+import { initGridVideos, initCategoryShowVideos } from '../scripts/videos'
 import { initUpdateNavbarOnScroll } from '../scripts/navbar'
 
 document.addEventListener('turbolinks:load', () => {
@@ -30,4 +30,5 @@ document.addEventListener('turbolinks:load', () => {
   initVh100();
   initGridVideos();
   initUpdateNavbarOnScroll();
+  initCategoryShowVideos();
 })
