@@ -1,8 +1,31 @@
 /* Slideshow container */
+.profiler-button, .profiler-totals {display: none !important;}
 .slideshow-container {
   width:100%;
   position: relative;
-  // height: 80vh;
+  .close-work-show-icon {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    padding: 14px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: $secondary-opacity;
+  }
+}
+
+/* Number text (1/3 etc) */
+.numberText {
+  color: $secondary-opacity;
+  font-size: 12px;
+  padding: 14px 20px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  p {
+    margin: 0;
+  }
 }
 
 /* Hide the images by default */
@@ -19,22 +42,16 @@
   }
 }
 
-@media screen and (max-width: 900px) and (orientation: landscape) {
-  .mySlides { height: 80vh };
-}
-@media screen and (max-width: 900px) and (orientation: portrait) {
-  .mySlides { height: 60vh };
-}
+
 
 
 /* Next & previous buttons */
 .btnPrev, .btnNext {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  // margin-top: -22px;
+  padding: 0 24px;
   background-color: rgba(0,0,0,0.1);
   color: $secondary-opacity;
   font-weight: bold;
@@ -42,6 +59,10 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  height: 85vh;
+  top: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* Position the "next button" to the right */
@@ -52,22 +73,20 @@
 
 /* On hover, add a black background color with a little bit see-through */
 
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .mySlides, .btnPrev, .btnNext { height: 80vh };
+}
+@media screen and (max-width: 900px) and (orientation: portrait) {
+  .mySlides, .btnPrev, .btnNext { height: 60vh };
+}
 @media screen and (min-width: 900px) {
+  .slideshow-container {
+    .close-work-show-icon, .numberText {
+      padding: 20px;
+    }
+  }
   .btnPrev:hover, .btnNext:hover {
     background-color: rgba(0,0,0,0.6);
-  }
-}
-
-/* Number text (1/3 etc) */
-.numberText {
-  color: $secondary-opacity;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  opacity: 0.6;
-  p {
-    margin: 0;
   }
 }
 
