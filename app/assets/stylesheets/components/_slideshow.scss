@@ -46,13 +46,8 @@
     max-height: 100%;
     max-width: 100%;
     width: auto;
-    margin: auto;
-  }
-  img {
     height: auto;
-  }
-  video {
-    height: 100%;
+    margin: auto;
   }
 }
 
@@ -102,6 +97,11 @@
       width: 60px;
       height: 60px;
       font-size: 24px;
+    }
+    .mySlides {
+      video {
+        height: 100%;
+      }
     }
   }
 }
