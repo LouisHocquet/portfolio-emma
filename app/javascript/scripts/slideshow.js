@@ -42,7 +42,15 @@ const initSlideShow = () => {
       slideShowVideo.play();
       slideShowVideo.muted = true;
     }
-  
+
+    // Back to previous screen
+    const backButton = slideShowContainer.querySelector('.close-work-show-icon');
+    if (backButton) {
+      backButton.addEventListener('click', () => {
+        console.log('click on close');
+        history.back();
+      })
+    }
   }
 }
 
