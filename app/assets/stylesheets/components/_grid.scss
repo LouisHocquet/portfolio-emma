@@ -48,13 +48,6 @@
   }
 }
 
-.grid-container>a:hover {
-  cursor: pointer;
-  .hover-title {
-    display: flex;
-  }
-}
-
 .w-4 {
   flex: 4 0 auto;
   width: 1000px;
@@ -78,6 +71,15 @@
 .w-0 {
   flex: 1 3 auto;
   width: 300px;
+}
+
+@media screen and (min-width: 901px) {
+  .grid-container>a:hover {
+    cursor: pointer;
+    .hover-title {
+      display: flex;
+    }
+  }  
 }
 
 @media screen and (max-width: 900px) {
