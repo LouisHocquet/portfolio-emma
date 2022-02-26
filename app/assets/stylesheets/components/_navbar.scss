@@ -1,4 +1,5 @@
 .navbar-container {
+  transition-duration: 600ms;
   background-color: $primary;
   position: fixed;
   z-index: 2;
@@ -54,7 +55,8 @@
   }
 
   .navbar-transparent {
-    background-color: $primary-opacity;
+    opacity: 0.4;
+    transition-duration: 600ms;
   }
 }
 
