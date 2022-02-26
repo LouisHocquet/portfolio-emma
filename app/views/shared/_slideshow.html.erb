@@ -15,7 +15,7 @@
       <% if image.file_type == 0 %>
         <%= image_tag image.path %>
       <% elsif image.file_type == 1 %>
-        <%= video_tag image.path, autoplay:false, loop: true,
+        <%= video_tag image.path, loop: true,
         controls: true %>
       <% end %>
       
