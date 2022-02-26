@@ -8,8 +8,14 @@
       <% unless images.length <= 1 %>
         <div class="numberText"> <p><%= "#{(index + 1).to_s} / #{images.count.to_s}" %></p></div>
       <% end %>
-      <% [0, 1].include?(image.format) ? max_dim = "height" : max_dim = "width" %>
-      <%= image_tag image.path %>
+      
+      <% if image.file_type == 0 %>
+        <%= image_tag image.path %>
+      <% elsif image.file_type == 1 %>
+        <%= video_tag image.path, loop: true,
+        controls: true %>
+      <% end %>
+      
     </div>
   <% end %>
 

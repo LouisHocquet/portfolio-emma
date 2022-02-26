@@ -35,6 +35,13 @@ const initSlideShow = () => {
     const prevSlide = () => {
       showSlides(slideIndex -= 1);
     }
+
+    // Videos
+    const slideShowVideo = slideShowContainer.querySelector('video');
+    if (slideShowVideo) {
+      slideShowVideo.play();
+      slideShowVideo.muted = true;
+    }
   
   }
 }
