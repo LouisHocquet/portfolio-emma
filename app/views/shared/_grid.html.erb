@@ -12,7 +12,7 @@
 
       <% elsif main_image.file_type == 1 %>
         <%= video_tag main_image.path, autoplay: false, muted: true, 
-        loop: true, controls: false %>
+        loop: true, controls: false, , playsinline: true %>
       <% end %>
       <div class="hover-title">
         <h2><%= "- #{work.category.name} -" %><br><%= work.title %></h2>
