@@ -5,9 +5,6 @@ const initGridVideos = () => {
     gridVideos.forEach((video) => {
       video.play();
       video.muted = true;
-      video.addEventListener('click', (event) => {
-        event.preventDefault();
-      })
     })
   }
 }
@@ -16,12 +13,9 @@ const initCategoryShowVideos = () => {
   const categoryWorkList = document.querySelector('.category-work-list');
   if (categoryWorkList) {
     const categoryShowVideos = categoryWorkList.querySelectorAll('video');
-    gridVideos.forEach((video) => {
+    categoryShowVideos.forEach((video) => {
       video.play();
       video.muted = true;
-      video.addEventListener('click', (event) => {
-        event.preventDefault();
-      })
     })
   }
 }

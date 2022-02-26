@@ -39,7 +39,7 @@ const initSlideShow = () => {
     // Videos
     const slideShowVideo = slideShowContainer.querySelector('video');
     if (slideShowVideo) {
-      slideShowVideo.play();
+      // slideShowVideo.play();
       slideShowVideo.muted = true;
     }
 
