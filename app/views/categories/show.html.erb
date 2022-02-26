@@ -18,7 +18,7 @@
       </div>
 
     <% elsif category_image.file_type == 1 %>
-      <%= video_tag category_image.path %>
+      <%= video_tag category_image.path, playsinline: true %>
       <div class="gradient-overlay">
         <div class="category-name">
           <h1 class="big-letters"><%= @category.name %></h1>
