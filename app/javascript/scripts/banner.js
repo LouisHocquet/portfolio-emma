@@ -1,5 +1,5 @@
 const initBannerVideo = () => {
-  const bannerVideo = document.querySelector('.banner-showreel>video');
+  const bannerVideo = document.querySelector('.banner-showreel');
   if (bannerVideo) {
     bannerVideo.play();
     bannerVideo.muted = true;
