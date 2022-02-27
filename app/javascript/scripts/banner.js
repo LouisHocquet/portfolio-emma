@@ -1,10 +1,8 @@
 const initBannerVideo = () => {
   const bannerVideo = document.querySelector('.banner-showreel>video');
   if (bannerVideo) {
-    setTimeout(() => {
-      bannerVideo.play();
-      bannerVideo.muted = true;
-    }, 200);
+    bannerVideo.play();
+    bannerVideo.muted = true;
 
     document.addEventListener("fullscreenchange", function() {
       if (document.fullscreen) {
