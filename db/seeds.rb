@@ -283,7 +283,7 @@ work_puck = category_character_design.works.create!(
   Vivant dans un monde médiéval fantastique, il est craintif mais curieux, ce qui le mène à quelques problèmes…'
 )
 work_puck.images.create!(
-  path: 'character_design/chara_design_puck_main-mini.jpg',
+  path: 'character_design/chara_design_puck_main-mini.png',
   format: 2,
   file_type: 0,
   main: true
@@ -295,7 +295,13 @@ work_puck.images.create!(
   main: false
 )
 work_puck.images.create!(
-  path: 'character_design/chara_design_puck_2-mini.jpg',
+  path: 'character_design/chara_design_puck_2-mini.png',
+  format: 2,
+  file_type: 0,
+  main: false
+)
+work_puck.images.create!(
+  path: 'character_design/chara_design_puck_3-mini.jpg',
   format: 2,
   file_type: 0,
   main: false

@@ -33,6 +33,9 @@
 
   .contact-block {
     margin-bottom: 30px;
+    a:hover {
+      color: $secondary;
+    }
   }
 }
 
@@ -46,6 +49,9 @@
   a {
     text-decoration: none;
     color: $black;
+  }
+  a:hover {
+    color: $secondary;
   }
   h2 {
     margin: 0;

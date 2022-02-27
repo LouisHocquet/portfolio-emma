@@ -6,16 +6,22 @@
   flex-direction: column;
   align-items: center;
   i {
-    font-size: 24px;
     margin: 0 8px;
+    font-size: 24px;
   }
 }
+
 .contact-links {
+  display: flex;
   a {
     text-decoration: none;
     color: $black;
   }
+  a:hover {
+    color: $primary;
+  }
 }
+
 .contact-email {
   display: flex;
   align-items: center;
@@ -25,8 +31,8 @@
   .contact-block {
     margin-top: 100px;
     i {
-      font-size: 40px;
       margin: 0 16px;
+      font-size: 40px;
     }
   }
 }
