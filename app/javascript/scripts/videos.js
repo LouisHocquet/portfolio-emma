@@ -3,8 +3,8 @@ const initGridVideos = () => {
   if (gridContainer) {
     const gridVideos = gridContainer.querySelectorAll('video');
     gridVideos.forEach((video) => {
-      video.play();
       video.muted = true;
+      video.play();
     })
   }
 }
@@ -14,8 +14,8 @@ const initCategoryShowVideos = () => {
   if (categoryWorkList) {
     const categoryShowVideos = categoryWorkList.querySelectorAll('video');
     categoryShowVideos.forEach((video) => {
-      video.play();
       video.muted = true;
+      video.play();
     })
   }
 }

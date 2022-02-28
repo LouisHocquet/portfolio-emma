@@ -39,8 +39,8 @@ const initSlideShow = () => {
     // Videos
     const slideShowVideo = slideShowContainer.querySelector('video');
     if (slideShowVideo) {
-      slideShowVideo.play();
       slideShowVideo.muted = true;
+      slideShowVideo.play();
     }
 
     // Back to previous screen
